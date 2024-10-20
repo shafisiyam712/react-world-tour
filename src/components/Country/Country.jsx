@@ -17,9 +17,9 @@ const Country = ({country , handleVisitedCountry, handleVisitedFlags}) => {
         <div className={`country ? ${visited && 'visited'}`}>
             <h3 style={{color:visited?'black':'white'}}>Name:{name.common}</h3>
             <img src={flags.png} alt="" />
-            <p>Population:{population}</p>
-            <p>Area: {area}</p>
-            <small>Code: {cca3}</small>
+            <p style={{color:visited?'black':'white'}}>Population:{population}</p>
+            <p style={{color:visited?'black':'white'}}>Area: {area}</p>
+            <small style={{color:visited?'black':'white'}}>Code: {cca3}</small>
             <button onClick={()=>handleVisitedCountry(country)}>Mark as visited</button>
             <br />
             <button onClick={() => handleVisitedFlags(country.flags.png)}>Add Flag</button>
